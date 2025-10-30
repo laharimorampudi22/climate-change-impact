@@ -5,7 +5,7 @@ import joblib
 # Load dataset
 df = pd.read_csv('data.csv')
 
-# Train model
+# Train simple regression model
 X = df[['year']]
 y = df[['temperature', 'rainfall']]
 
@@ -14,5 +14,4 @@ model.fit(X, y)
 
 # Save trained model
 joblib.dump(model, 'climate_model.pkl')
-
 print("✅ Model trained successfully using data.csv!")
