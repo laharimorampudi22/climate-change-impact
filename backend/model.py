@@ -1,8 +1,8 @@
 import joblib
-import numpy as np
 import pandas as pd
+import numpy as np
 
-# Load model trained earlier
+# Load saved model
 model = joblib.load('climate_model.pkl')
 
 def predict_future(years):
@@ -15,4 +15,3 @@ def predict_future(years):
         "predicted_temp": [round(float(p[0]), 2) for p in preds],
         "predicted_rain": [round(float(p[1]), 2) for p in preds]
     }
-
